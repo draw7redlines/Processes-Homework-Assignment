@@ -99,7 +99,7 @@ public class inputFileProcessing {
 		//This method will work by printing via indexes, assuming that everything in the input got tokenized correctly
 		System.out.print("\n Let's see if we can keep all of this straight... The output is: \n");
 		
-		for(int flag = 0; flag<4; flag++)
+		for(int flag = 0; flag<candidateList.size(); flag++)
 		{
 			System.out.print(candidateList.get(flag) + " " + scoreOne.get(flag) + " " + scoreTwo.get(flag) + " "  + preferred.get(flag) + " " + preferenceOrder.get(flag)+ " " + "\n");
 			

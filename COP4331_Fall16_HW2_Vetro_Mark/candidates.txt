@@ -1,5 +1,5 @@
-Shenron;68;79;Dragon Balls;9000
-Goku;54;89;Hyperbolic Time Chamber;1
-Vegeta;68;79;Hyperbolic Time Chamber;3
+Shenron;68;79;Hyperbolic Time Chamber;9000
+Goku;54;89;Dragon Balls;1
+Vegeta;67;81;Hyperbolic Time Chamber;3
 Gohan;67;81;Supreme Kai's World;3
 Picolo;68;79;Planet Namek;2

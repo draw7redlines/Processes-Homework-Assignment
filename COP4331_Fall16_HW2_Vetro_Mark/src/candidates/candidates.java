@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 import candidates.inputFileProcessing;
 import candidates.generateScores;
+import candidates.sanitizeAndSort;
 
 public class candidates {
 
@@ -23,9 +24,22 @@ public class candidates {
 		LinkedList<Integer> scoreTwo = inputFileProcessing.scoreTwo;
 		LinkedList<String> preferred = inputFileProcessing.preferred;
 		LinkedList<Integer> preferenceOrder= inputFileProcessing.preferenceOrder;
+		LinkedList<Double> competitiveScores= new LinkedList<Double>();
 		
+		System.out.print("candidates who picked " + departmentName + " and their scores: \n");
+		for(int x=0; x<candidateList.size(); x++)
+		{
+			if(preferred.get(x).equals(departmentName))
+			{
+				double candidateCompetitiveScore = generateScores.generateScores(scoreOne.get(x), scoreTwo.get(x));
+				competitiveScores.add(candidateCompetitiveScore);
+				System.out.print(candidateList.get(x) + " " + candidateCompetitiveScore + "\n");
+			}
+			else
+				competitiveScores.add((double) -1);
+		}
 		
-
+		sanitizeAndSort.sanitizeSort(competitiveScores, candidateList, preferenceOrder);
 		
 	}
 	

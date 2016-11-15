@@ -2,11 +2,11 @@ package candidates;
 
 public class generateScores {
 
-	public static int generateScoresList()
+	public static double generateScores(int writeExam, int programExam)
 	{
+		double candidateScore = (.4*writeExam)+(.6*programExam);
 		
-		
-		return 0;
+		return candidateScore;
 	}
 	
 	
