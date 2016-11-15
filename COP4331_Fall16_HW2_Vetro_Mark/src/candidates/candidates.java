@@ -3,6 +3,7 @@ package candidates;
 import java.util.LinkedList;
 import java.util.Scanner;
 import candidates.inputFileProcessing;
+import candidates.generateScores;
 
 public class candidates {
 
@@ -22,7 +23,10 @@ public class candidates {
 		LinkedList<Integer> scoreTwo = inputFileProcessing.scoreTwo;
 		LinkedList<String> preferred = inputFileProcessing.preferred;
 		LinkedList<Integer> preferenceOrder= inputFileProcessing.preferenceOrder;
+		
+		
 
+		
 	}
 	
 	//Get name of the department to funnel candidate info into

@@ -23,7 +23,7 @@ public class inputFileProcessing {
 	public static void getCandidateInfo()
 	{
 		FileInputStream input = null;
-		FileOutputStream output = null;
+		
 		
 		
 		try{
