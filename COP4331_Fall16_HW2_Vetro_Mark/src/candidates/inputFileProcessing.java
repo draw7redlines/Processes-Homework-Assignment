@@ -6,6 +6,17 @@ import java.io.*;
 
 public class inputFileProcessing {
 	
+	
+	static LinkedList<String> candidateList = new LinkedList<String>();
+	
+	static LinkedList<Integer> scoreOne = new LinkedList<Integer>();
+
+	static LinkedList<Integer> scoreTwo = new LinkedList<Integer>();
+	
+	static LinkedList<String> preferred = new LinkedList<String>();
+	
+	static LinkedList<Integer> preferenceOrder= new LinkedList<Integer>();
+	
 	//Took advantage of Java's built in linked list structure and just made one for each attribute
 	//This is messy, I know, but it was easier than building a list with nodes, and saved me time that I'm always
 	//Short on. It works though!!!
@@ -13,16 +24,6 @@ public class inputFileProcessing {
 	{
 		FileInputStream input = null;
 		FileOutputStream output = null;
-		
-		LinkedList<String> candidateList = new LinkedList<String>();
-		
-		LinkedList<Integer> scoreOne = new LinkedList<Integer>();
-
-		LinkedList<Integer> scoreTwo = new LinkedList<Integer>();
-		
-		LinkedList<String> preferred = new LinkedList<String>();
-		
-		LinkedList<Integer> preferenceOrder= new LinkedList<Integer>();
 		
 		
 		try{
@@ -33,24 +34,33 @@ public class inputFileProcessing {
 			e.printStackTrace();
 		}
 		
-		Scanner lineScan = new Scanner(input).useDelimiter(";");
+		Scanner lineScan = new Scanner(input).useDelimiter(";|\\n");
 		
 		int ticker=1;
 		
-		while(lineScan.hasNext())
+		while(lineScan.hasNextLine())
 		{
 			String lineIn = lineScan.next();
+			System.out.print("ticker = " + ticker + "\n");
 			
-			if(lineIn=="\\n"){
-				lineScan.nextLine();
-				//lineIn=lineScan.next();
+			if(ticker==5)
+			{
+				String tempString= lineIn.trim();
+				lineIn= tempString;
+				int temp = Integer.parseInt(lineIn);
+				preferenceOrder.add(temp);
+				temp=0;
+				ticker=1;
+				System.out.print(lineIn);
+				System.out.print("got here\n");
+				//lineIn= lineScan.nextLine();
 			}
 			
 			else if(ticker==1)
 			{
 				candidateList.add(lineIn);	
 				ticker++;
-				System.out.print(lineIn);
+				System.out.print(lineIn + "\n");
 			}
 			else if(ticker==2)
 			{
@@ -58,7 +68,7 @@ public class inputFileProcessing {
 				scoreOne.add(temp);
 				temp=0;
 				ticker++;
-				System.out.print(lineIn);
+				System.out.print(lineIn + "\n");
 			}
 			else if(ticker==3)
 			{
@@ -66,24 +76,17 @@ public class inputFileProcessing {
 				scoreTwo.add(temp);
 				temp=0;
 				ticker++;
-				System.out.print(lineIn);
+				System.out.print(lineIn + "\n");
 			}
 			else if(ticker==4)
 			{
 				preferred.add(lineIn);
 				ticker++;
-				System.out.print(lineIn);
+				System.out.print(lineIn + "\n");
+				
 				
 			}
-			else if(ticker==5)
-			{
-				int temp = Integer.parseInt(lineIn);
-				preferenceOrder.add(temp);
-				temp=0;
-				ticker=1;
-				System.out.print(lineIn);
-				System.out.print("got here\n");
-			}
+			
 			else{
 				System.out.print("Something broke, shouldn't have been able to get here lol \n");
 			}
@@ -98,7 +101,7 @@ public class inputFileProcessing {
 		
 		for(int flag = 0; flag<4; flag++)
 		{
-			System.out.print(candidateList.get(flag) + " " + scoreOne.get(flag) + " " + scoreTwo.get(flag) + " "  + preferred.get(flag) + " " + preferenceOrder.get(flag)+ " ");
+			System.out.print(candidateList.get(flag) + " " + scoreOne.get(flag) + " " + scoreTwo.get(flag) + " "  + preferred.get(flag) + " " + preferenceOrder.get(flag)+ " " + "\n");
 			
 		}
 		

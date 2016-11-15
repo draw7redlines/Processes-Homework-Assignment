@@ -1,5 +1,6 @@
 package candidates;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 import candidates.inputFileProcessing;
 
@@ -15,6 +16,12 @@ public class candidates {
 		
 		inputFileProcessing process = new inputFileProcessing();
 		process.getCandidateInfo();
+		
+		LinkedList<String> candidateList = inputFileProcessing.candidateList;
+		LinkedList<Integer> scoreOne = inputFileProcessing.scoreOne;
+		LinkedList<Integer> scoreTwo = inputFileProcessing.scoreTwo;
+		LinkedList<String> preferred = inputFileProcessing.preferred;
+		LinkedList<Integer> preferenceOrder= inputFileProcessing.preferenceOrder;
 
 	}
 	
