@@ -1,5 +1,11 @@
 Shenron;68;79;Hyperbolic Time Chamber;9000
-Goku;54;89;Dragon Balls;1
+Goku;54;89;Hyperbolic Time Chamber;1
 Vegeta;67;81;Hyperbolic Time Chamber;3
-Gohan;67;81;Supreme Kai's World;3
-Picolo;68;79;Planet Namek;2
+Gohan;70;92;Hyperbolic Time Chamber;2
+Picolo;68;79;Hyperbolic Time Chamber;2
+Trunks;54;86;Hyperbolic Time Chamber;1
+Goten;74;98;Hyperbolic Time Chamber;4
+Cell;62;79;Hyperbolic Time Chamber;6
+Frieza;67;88;Hyperbolic Time Chamber;12
+Bardock;70;88;Hyperbolic Time Chamber;5
+Turles;43;79;Hyperbolic Time Chamber;19

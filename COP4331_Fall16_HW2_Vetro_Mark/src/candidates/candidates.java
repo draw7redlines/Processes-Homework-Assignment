@@ -16,8 +16,7 @@ public class candidates {
 		String departmentName= getDepartmentName();
 		System.out.print("Got the dept name as: " + departmentName + "\n");
 		
-		inputFileProcessing process = new inputFileProcessing();
-		process.getCandidateInfo();
+		inputFileProcessing.getCandidateInfo();
 		
 		LinkedList<String> candidateList = inputFileProcessing.candidateList;
 		LinkedList<Integer> scoreOne = inputFileProcessing.scoreOne;
@@ -40,6 +39,7 @@ public class candidates {
 		}
 		
 		sanitizeAndSort.sanitizeSort(competitiveScores, candidateList, preferenceOrder);
+		System.out.print("made it here \n");
 		
 	}
 	
@@ -47,12 +47,12 @@ public class candidates {
 	public static String getDepartmentName()
 	{
 		System.out.print("Enter the department name here: \n");
-		Scanner getName= new Scanner(System.in);
+		try(Scanner getName= new Scanner(System.in)){
 		String departmentName = getName.nextLine();
 		System.out.println("Read Dept. Name as: " + departmentName + "\n");
 		return departmentName;
 		
-		
+		}
 	}
 
 }
