@@ -1,11 +1,13 @@
 package candidates;
 
+import java.io.FileNotFoundException;
 import java.util.Collections;
 import java.util.LinkedList;
+import candidates.output;
 
 public class sanitizeAndSort {
 	
-	public static void sanitizeSort(LinkedList<Double> competitiveScores, LinkedList<String> candidateList, LinkedList<Integer> preferenceOrder)
+	public static void sanitizeSort(LinkedList<Double> competitiveScores, LinkedList<String> candidateList, LinkedList<Integer> preferenceOrder, String departmentName)
 	{
 		LinkedList<Integer> temp3 = preferenceOrder;
 		LinkedList<String> temp2 = candidateList;
@@ -61,6 +63,14 @@ public class sanitizeAndSort {
 		for(int dragonBall = 0; dragonBall<nameArr.length; dragonBall++)
 		{
 			System.out.print(nameArr[dragonBall] + " score " + scoreArr[dragonBall] + " preference " + prefArr[dragonBall] + "\n");
+		}
+		
+		
+		try {
+			output.writeToOutput(nameArr, departmentName);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 	}

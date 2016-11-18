@@ -38,8 +38,8 @@ public class candidates {
 				competitiveScores.add((double) -1);
 		}
 		
-		sanitizeAndSort.sanitizeSort(competitiveScores, candidateList, preferenceOrder);
-		System.out.print("made it here \n");
+		sanitizeAndSort.sanitizeSort(competitiveScores, candidateList, preferenceOrder, departmentName);
+		
 		
 	}
 	
