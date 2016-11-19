@@ -41,7 +41,6 @@ public class inputFileProcessing {
 		while(lineScan.hasNextLine())
 		{
 			String lineIn = lineScan.next();
-			System.out.print("ticker = " + ticker + "\n");
 			
 			if(ticker==5)
 			{
@@ -51,16 +50,12 @@ public class inputFileProcessing {
 				preferenceOrder.add(temp);
 				temp=0;
 				ticker=1;
-				System.out.print(lineIn);
-				System.out.print("got here\n");
-				//lineIn= lineScan.nextLine();
 			}
 			
 			else if(ticker==1)
 			{
 				candidateList.add(lineIn);	
 				ticker++;
-				System.out.print(lineIn + "\n");
 			}
 			else if(ticker==2)
 			{
@@ -68,41 +63,27 @@ public class inputFileProcessing {
 				scoreOne.add(temp);
 				temp=0;
 				ticker++;
-				System.out.print(lineIn + "\n");
 			}
+			
 			else if(ticker==3)
 			{
 				int temp= Integer.parseInt(lineIn);
 				scoreTwo.add(temp);
 				temp=0;
 				ticker++;
-				System.out.print(lineIn + "\n");
 			}
+			
 			else if(ticker==4)
 			{
 				preferred.add(lineIn);
 				ticker++;
-				System.out.print(lineIn + "\n");
-				
 				
 			}
 			
 			else{
-				System.out.print("Something broke, shouldn't have been able to get here lol \n");
+				System.out.print("A hold got ripped in the fabric of time, you shouldn't have been able to get here ghostrider \n");
 			}
 				
-		}
-		
-		
-		
-		
-		//This method will work by printing via indexes, assuming that everything in the input got tokenized correctly
-		System.out.print("\n Let's see if we can keep all of this straight... The output is: \n");
-		
-		for(int flag = 0; flag<candidateList.size(); flag++)
-		{
-			System.out.print(candidateList.get(flag) + " " + scoreOne.get(flag) + " " + scoreTwo.get(flag) + " "  + preferred.get(flag) + " " + preferenceOrder.get(flag)+ " " + "\n");
-			
 		}
 		
 	}

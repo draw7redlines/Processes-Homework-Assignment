@@ -22,13 +22,9 @@ public class output {
 		
 		PrintWriter output = new PrintWriter(outputFile);
 		
-		
-		System.out.print("\n This is what the output file will look like: \n");
-		
 		int godOfDestructionBeerus = 0;
 		while(godOfDestructionBeerus <4 && nameArr[godOfDestructionBeerus]!=null)
 		{
-			System.out.print(nameArr[godOfDestructionBeerus] + "\n");
 			output.println(nameArr[godOfDestructionBeerus] + "\n");
 			godOfDestructionBeerus++;
 		}
