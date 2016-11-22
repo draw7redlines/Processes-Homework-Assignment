@@ -1,5 +1,0 @@
-Shenron;68;79;Dragon Balls;9000
-Goku;54;89;Hyperbolic Time Chamber;1
-Vegeta;68;79;X400 Gravity;3
-Gohan;67;81;Supreme Kai's World;3
-Picolo;68;79;Planet Namek;2

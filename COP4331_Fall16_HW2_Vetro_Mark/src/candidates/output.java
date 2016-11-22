@@ -22,6 +22,7 @@ public class output {
 		
 		PrintWriter output = new PrintWriter(outputFile);
 		
+		
 		int godOfDestructionBeerus = 0;
 		while(godOfDestructionBeerus <4 && nameArr[godOfDestructionBeerus]!=null)
 		{

@@ -7,6 +7,7 @@ import candidates.output;
 
 public class sanitizeAndSort {
 	
+	
 	public static void sanitizeSort(LinkedList<Double> competitiveScores, LinkedList<String> candidateList, LinkedList<Integer> preferenceOrder, String departmentName)
 	{
 		LinkedList<Integer> temp3 = preferenceOrder;
@@ -30,6 +31,9 @@ public class sanitizeAndSort {
 		}
 		
 		
+		
+		for(int y=0; y<prefArr.length; y++){
+			
 		for(int x=0; x<prefArr.length-1; x++)
 		{
 			if((scoreArr[x]-scoreArr[x+1])<=1)
@@ -52,6 +56,10 @@ public class sanitizeAndSort {
 			}
 			
 		}
+		
+		}
+		
+		
 		
 		try {
 			output.writeToOutput(nameArr, departmentName);
